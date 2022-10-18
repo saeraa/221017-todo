@@ -45,7 +45,6 @@ function createNewElement(todo, index) {
 	ul.appendChild(li);
 	li.addEventListener("click", (e) => {
 		e.stopPropagation();
-		console.log("hi");
 		li.classList.toggle("complete");
 
 		if (li.classList.contains("complete") && todoArray[index]) {
@@ -59,11 +58,11 @@ function createNewElement(todo, index) {
 	const btn = document.createElement("button");
 	btn.textContent = "🗑️";
 	btn.classList.add("delete");
-	btn.addEventListener("click", () => {
+	btn.addEventListener("click", (e) => {
+		e.stopPropagation();
 		li.remove();
 		delete todoArray[index];
 		updateCompleted();
-		console.log(todoArray);
 	});
 	li.insertAdjacentElement("beforeend", btn);
 }

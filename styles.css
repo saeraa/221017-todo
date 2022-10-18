@@ -1,0 +1,154 @@
+body {
+  background: linear-gradient(to bottom, #e2adb3, #F36F7E);
+  max-height: 100vh;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+#container {
+  margin: auto;
+  width: 320px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: appear .9s ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: .1s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(4rem);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+h1 {
+  margin: 0;
+  padding: .5em 0 0 0;
+  font-size: 2.5rem;
+  font-family: serif;
+  animation: fadeIn .5s ease-in;
+  animation-delay: .9s;
+  animation-fill-mode: backwards;
+}
+
+
+#completed {
+  margin: .7rem 0 1.5rem;
+  font-size: .8rem;
+  animation: fadeIn .5s ease-in;
+  animation-delay: .95s;
+  animation-fill-mode: backwards;
+}
+
+form {
+  animation: fadeIn .5s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+
+#error {
+  display: none;
+  text-align: center;
+  color: red;
+  font-style: italic;
+  font-size: .7rem;
+  margin-top: 5px;
+  animation: blink 1.2s linear;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0
+  }
+
+  20% {
+    opacity: 1
+  }
+
+  40% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+button.delete {
+  border: none;
+  background-color: inherit;
+  font-size: 1rem;
+  opacity: .7;
+  cursor: pointer;
+  transition: opacity .2s ease-in;
+}
+
+button.delete:hover {
+  opacity: 1;
+}
+
+ul {
+  padding: 0;
+  margin: 1rem;
+}
+
+li {
+  cursor: pointer;
+  margin: 5px;
+  font-size: 1.2rem;
+  list-style: none;
+  text-align: center;
+  animation: slideIn .5s ease-in;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: .3;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.complete {
+  transition: all .6s;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}

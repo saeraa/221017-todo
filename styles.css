@@ -15,9 +15,7 @@ body {
   width: 320px;
   background-color: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  animation: appear .9s ease-out;
-  animation-fill-mode: backwards;
-  animation-delay: .1s;
+  animation: appear .9s ease-out .1s backwards;
 }
 
 @keyframes appear {
@@ -41,9 +39,7 @@ h1 {
   padding: .5em 0 0 0;
   font-size: 2.5rem;
   font-family: serif;
-  animation: fadeIn .5s ease-in;
-  animation-delay: .9s;
-  animation-fill-mode: backwards;
+  animation: fadeIn .5s ease-in .9s backwards;
 }
 
 @keyframes fadeIn {
@@ -59,15 +55,11 @@ h1 {
 #completed {
   margin: .7rem 0 1.5rem;
   font-size: .8rem;
-  animation: fadeIn .5s ease-in;
-  animation-delay: .95s;
-  animation-fill-mode: backwards;
+  animation: fadeIn .5s ease-in .95s backwards;
 }
 
 form {
-  animation: fadeIn .5s ease-in;
-  animation-delay: 1s;
-  animation-fill-mode: backwards;
+  animation: fadeIn .5s ease-in 1s backwards;
 }
 
 input {

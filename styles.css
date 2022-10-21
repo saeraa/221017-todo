@@ -63,7 +63,6 @@ input:focus {
   animation: blink 1.2s linear;
 }
 
-
 button.delete {
   border: none;
   background-color: inherit;
@@ -97,9 +96,6 @@ li {
   color: rgba(0, 0, 0, 0.5);
 }
 
-
-
-
 @keyframes slideIn {
   0% {
     opacity: .3;
@@ -114,27 +110,27 @@ li {
 
 @keyframes blink {
   0% {
-    opacity: 0
+    opacity: 0;
   }
 
   20% {
-    opacity: 1
+    opacity: 1;
   }
 
   40% {
-    opacity: 0
+    opacity: 0;
   }
 
   60% {
-    opacity: 1
+    opacity: 1;
   }
 
   80% {
-    opacity: 0
+    opacity: 0;
   }
 
   100% {
-    opacity: 1
+    opacity: 1;
   }
 }
 

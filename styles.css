@@ -20,32 +20,6 @@ body {
   animation-delay: .1s;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: translateY(0%);
-  }
-
-  25% {
-    opacity: 1;
-    transform: translateY(4rem);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
 h1 {
   margin: 0;
   padding: .5em 0 0 0;
@@ -55,7 +29,6 @@ h1 {
   animation-delay: .9s;
   animation-fill-mode: backwards;
 }
-
 
 #completed {
   margin: .7rem 0 1.5rem;
@@ -71,6 +44,14 @@ form {
   animation-fill-mode: backwards;
 }
 
+input {
+  outline: none;
+  border-radius: 3px;
+}
+
+input:focus {
+  border: 2px solid rgb(49, 70, 204);
+}
 
 #error {
   display: none;
@@ -82,31 +63,6 @@ form {
   animation: blink 1.2s linear;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 0
-  }
-
-  20% {
-    opacity: 1
-  }
-
-  40% {
-    opacity: 0
-  }
-
-  60% {
-    opacity: 1
-  }
-
-  80% {
-    opacity: 0
-  }
-
-  100% {
-    opacity: 1
-  }
-}
 
 button.delete {
   border: none;
@@ -135,6 +91,15 @@ li {
   animation: slideIn .5s ease-in;
 }
 
+.complete {
+  transition: all .6s;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
 @keyframes slideIn {
   0% {
     opacity: .3;
@@ -147,8 +112,54 @@ li {
   }
 }
 
-.complete {
-  transition: all .6s;
-  text-decoration: line-through;
-  color: rgba(0, 0, 0, 0.5);
+@keyframes blink {
+  0% {
+    opacity: 0
+  }
+
+  20% {
+    opacity: 1
+  }
+
+  40% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(4rem);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1
+  }
 }

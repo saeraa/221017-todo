@@ -34,7 +34,7 @@ body {
   }
 }
 
-h1 {
+.header {
   margin: 0;
   padding: .5em 0 0 0;
   font-size: 2.5rem;
@@ -58,20 +58,20 @@ h1 {
   animation: fadeIn .5s ease-in .95s backwards;
 }
 
-form {
+.form {
   animation: fadeIn .5s ease-in 1s backwards;
 }
 
-input {
+.form-input {
   outline: none;
   border-radius: 3px;
 }
 
-input:focus {
+.form-input:focus {
   border: 2px solid rgb(49, 70, 204);
 }
 
-#error {
+.form-error {
   display: none;
   margin-top: 5px;
   text-align: center;
@@ -107,7 +107,7 @@ input:focus {
   }
 }
 
-button.delete {
+.list-btn.delete {
   cursor: pointer;
   opacity: .7;
   border: none;
@@ -116,16 +116,16 @@ button.delete {
   transition: opacity .2s ease-in;
 }
 
-button.delete:hover {
+.list-btn.delete:hover {
   opacity: 1;
 }
 
-ul {
+.list {
   padding: 0;
   margin: 1rem;
 }
 
-li {
+.list-item {
   cursor: pointer;
   list-style: none;
   margin: 5px;
@@ -146,7 +146,7 @@ li {
   }
 }
 
-.complete {
+.list-item.complete {
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.5);
   transition: all .6s;

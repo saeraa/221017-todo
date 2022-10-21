@@ -43,6 +43,7 @@ function createNewElement(todo, index) {
 	const li = document.createElement("li");
 	li.textContent = todo.todo;
 	ul.appendChild(li);
+	li.classList.add("list-item");
 	li.addEventListener("click", (e) => {
 		e.stopPropagation();
 		li.classList.toggle("complete");
@@ -57,7 +58,7 @@ function createNewElement(todo, index) {
 	});
 	const btn = document.createElement("button");
 	btn.textContent = "🗑️";
-	btn.classList.add("delete");
+	btn.classList.add("delete", "list-btn");
 	btn.addEventListener("click", (e) => {
 		e.stopPropagation();
 		li.remove();
